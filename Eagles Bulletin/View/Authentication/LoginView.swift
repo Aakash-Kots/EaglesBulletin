@@ -46,8 +46,8 @@ struct LoginView: View {
                             
                             
                             SecureTextField(placeholder: "Password", text: $password, imageName: "lock")
-                            Button {
-                                print("Login")
+                            NavigationLink() {
+                                // Login the user. This should automatically take the user to the home page. Firebase functionality needed
                             } label: {
                                 AuthButton(text: "Login")
                             }

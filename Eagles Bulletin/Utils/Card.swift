@@ -15,13 +15,23 @@ struct Card: View {
     
     var body: some View {
         ZStack {
+            
+            
+            
+            
             Color("Primary")
+                .opacity(0.7)
+                
+            
+            
+                
             
             VStack {
                 HStack {
                     Text(title)
                         .font(.largeTitle.bold())
                         .foregroundColor(.black)
+                    
                     Image(systemName: imageName)
                         .font(.largeTitle)
                         .foregroundColor(.black)
@@ -40,6 +50,7 @@ struct Card: View {
         .frame(width: 200, height: 300)
         .cornerRadius(20)
         .shadow(color: .black.opacity(0.15), radius: 5)
+        
         
     }
 }

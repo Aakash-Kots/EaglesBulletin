@@ -13,6 +13,7 @@ struct Category: View {
     var body: some View {
         ZStack {
             Color("Primary")
+                
             Image(imageName)
                 .resizable()
                 .scaledToFit()
@@ -20,6 +21,7 @@ struct Category: View {
         }
         .frame(width: 80, height: 75)
         .cornerRadius(15)
+         
         
     }
 }

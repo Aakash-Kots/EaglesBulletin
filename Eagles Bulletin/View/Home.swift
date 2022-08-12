@@ -8,117 +8,102 @@
 import SwiftUI
 
 struct Home: View {
+    
+    var categories1: [Category] = [ Category(imageName: "Politics"), Category(imageName: "Sports"), Category(imageName: "Music")]
+    var categories2 : [Category] = [Category(imageName: "Food"), Category(imageName: "Art"),Category(imageName: "Health")]
+    
     var body: some View {
         
         NavigationView {
             ZStack {
-                Color("Background")
-                    .ignoresSafeArea()
-                
-                ScrollView(showsIndicators: false) {
-                    VStack {
-                        HStack {
-                            Text("Recents")
-                                .font(.largeTitle.bold())
-                                .foregroundColor(.black)
-                            Spacer()
-                        }
-                        .padding()
-                        
-                        ScrollView(.horizontal, showsIndicators: false) {
-                            HStack(spacing: 32) {
-                                Spacer()
-                                Button {
-                                    print("Recents pressd")
-                                } label: {
-                                    Card(title: "Test", description: "Test", imageName: "person")
-                                }
-
-                                
-                                Button {
-                                    print("Recents pressed")
-                                } label: {
-                                    Card(title: "Test", description: "Test", imageName: "person")
-                                }
-                                Button {
-                                    print("Recents pressed")
-                                } label: {
-                                    Card(title: "Test", description: "Test", imageName: "person")
-                                }
-
+                    Color("Background")
+                        .ignoresSafeArea()
+                    
+                    ScrollView(showsIndicators: false) {
+                        VStack {
+                            HStack {
+                                Text("Recents")
+                                    .font(.largeTitle.bold())
+                                    .foregroundColor(.black)
                                 Spacer()
                             }
-                            .padding(.vertical)
-                        }
-                        
-                        // Categories
-                        
-                        
-                        VStack(alignment: .leading, spacing: 40) {
-                            Text("Categories")
-                                .font(.largeTitle.bold())
-                                .foregroundColor(.black)
+                            .padding()
                             
-                            HStack(alignment: .center) {
-                                Spacer()
-                                Button {
-                                    print("Category Pressed")
-                                } label: {
-                                    Category(imageName: "Politics")
-                                }
+                            ScrollView(.horizontal, showsIndicators: false) {
+                                HStack(spacing: 32) {
+                                    Spacer()
+                                    Button {
+                                        print("Recents pressd")
+                                    } label: {
+                                        Card(title: "Test", description: "Test", imageName: "person")
+                                    }
 
-                                
-                                Spacer()
-                                NavigationLink {
-                                    CategoryListView(categoryName: "Sports")
-                                } label: {
-                                    Category(imageName: "Sports")
-                                }
+                                    
+                                    Button {
+                                        print("Recents pressed")
+                                    } label: {
+                                        Card(title: "Test", description: "Test", imageName: "person")
+                                    }
+                                    Button {
+                                        print("Recents pressed")
+                                    } label: {
+                                        Card(title: "Test", description: "Test", imageName: "person")
+                                    }
 
-                                Spacer()
-                                NavigationLink {
-                                    CategoryListView(categoryName: "Politics")
-                                } label: {
-                                    Category(imageName: "Politics")
+                                    Spacer()
                                 }
-
-                                Spacer()
-                                
+                                .padding(.vertical)
                             }
-                            HStack(alignment: .center) {
-                                Spacer()
-                                Button {
-                                    print("Category Pressed")
-                                } label: {
-                                    Category(imageName: "Politics")
-                                }
-
-                                Spacer()
-                                Button {
-                                    print("Category Pressed")
-                                } label: {
-                                    Category(imageName: "Sports")
-                                }
-
-                                Spacer()
-                                Button {
-                                    print("Category Pressed")
-                                } label: {
-                                    Category(imageName: "Politics")
-                                }
-
-                                Spacer()
+                            
+                            // Categories
+                            
+                            
+                            VStack(alignment: .leading, spacing: 40) {
+                                Text("Categories")
+                                    .font(.largeTitle.bold())
+                                    .foregroundColor(.black)
                                 
-                                
+                                HStack(alignment: .center) {
+                                    Spacer()
+                                    ForEach(categories1, id: \.imageName) { category in
+                                        Spacer()
+                                        NavigationLink() {
+                                            CategoryListView(categoryName: category.imageName)
+                                        } label: {
+                                            category
+                                        }
+                                        Spacer()
+                                    }
+
+                                    Spacer()
+                                    
+                                }
+                                HStack(alignment: .center) {
+                                    Spacer()
+                                    ForEach(categories2, id: \.imageName) { category in
+                                        Spacer()
+                                        NavigationLink() {
+                                            CategoryListView(categoryName: category.imageName)
+                                        } label: {
+                                            category
+                                        }
+                                        Spacer()
+                                    }
+                                    Spacer()
+                                    
+                                    
+                                }
                             }
+                            .padding()
+                            
+                            
                         }
-                        .padding()
-                        
-                        
                     }
+                    
                 }
-            }
-            .navigationBarHidden(true)
+                .navigationBarHidden(true)
+                .navigationBarBackButtonHidden(true)
+            .navigationBarTitleDisplayMode(.inline)
         }
     }
 }

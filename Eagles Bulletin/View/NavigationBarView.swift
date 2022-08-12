@@ -15,6 +15,8 @@ struct NavigationBarView: View {
                     Label("Home", systemImage: "house.fill")
                 }
         }
+        
+        
     }
 }
 

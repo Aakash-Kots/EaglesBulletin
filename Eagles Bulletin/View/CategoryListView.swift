@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CategoryListView: View {
+    @Environment(\.presentationMode) var mode
     var categoryName: String
     
     var body: some View {
@@ -15,8 +16,13 @@ struct CategoryListView: View {
             Color("Background")
                 .ignoresSafeArea()
             
+          
+            
             ScrollView(showsIndicators: false) {
+               
+                
                 VStack(spacing:37) {
+                    
                     
                     HStack {
                         Text(categoryName)
@@ -55,6 +61,8 @@ struct CategoryListView: View {
             
         }
         .navigationBarTitleDisplayMode(.inline)
+        
+        
     }
 }
 
