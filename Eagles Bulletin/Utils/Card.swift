@@ -11,7 +11,8 @@ struct Card: View {
     
     var title: String
     var description: String
-    var imageName: String
+    var category: ArticleCategory
+    var backgroundColor: Color
     
     var body: some View {
         ZStack {
@@ -19,8 +20,8 @@ struct Card: View {
             
             
             
-            Color("Primary")
-                .opacity(0.7)
+            backgroundColor
+                
                 
             
             
@@ -28,28 +29,35 @@ struct Card: View {
             
             VStack {
                 HStack {
-                    Text(title)
-                        .font(.largeTitle.bold())
-                        .foregroundColor(.black)
-                    
-                    Image(systemName: imageName)
-                        .font(.largeTitle)
-                        .foregroundColor(.black)
+                    Image(category.rawValue)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 30)
+                        
+                    Spacer()
                 }
+                    Text(title)
+                    .font(.headline)
+                        .foregroundColor(Color("Background"))
+                 
                 Spacer()
+                NavigationLink() {
+                    CategoryListView(categoryName: category.rawValue)
+                } label: {
+                    Text("Read More")
+                        .frame(width: 100, height: 30)
+                        .foregroundColor(.white)
+                        .background(Color("Background"))
+                        .cornerRadius(5)
+                }
                 
-                Text(description)
-                    .font(.body)
-                    .foregroundColor(.black)
-                
-                Spacer()
                 
             }
             .padding()
         }
-        .frame(width: 200, height: 300)
+        .frame(width: 130, height: 200)
         .cornerRadius(20)
-        .shadow(color: .black.opacity(0.15), radius: 5)
+        .shadow(color: .black.opacity(0.15), radius: 10)
         
         
     }
@@ -57,6 +65,6 @@ struct Card: View {
 
 struct Card_Previews: PreviewProvider {
     static var previews: some View {
-        Card(title: "Zyzz Legacy", description: "This is the legacy of zyzz", imageName: "person")
+        Card(title: "Zyzz Legacy", description: "This is the legacy of zyzz", category: .music, backgroundColor: Color.cyan.opacity(0.7))
     }
 }

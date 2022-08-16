@@ -20,7 +20,9 @@ struct Category: View {
                 .frame(width: 49, height: 49)
         }
         .frame(width: 80, height: 75)
-        .cornerRadius(15)
+        .cornerRadius(20)
+        .foregroundColor(.white)
+       
          
         
     }

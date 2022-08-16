@@ -16,93 +16,135 @@ struct Home: View {
         
         NavigationView {
             ZStack {
-                    Color("Background")
-                        .ignoresSafeArea()
-                    
-                    ScrollView(showsIndicators: false) {
-                        VStack {
-                            HStack {
-                                Text("Recents")
-                                    .font(.largeTitle.bold())
-                                    .foregroundColor(.black)
+                Color("Background")
+                    .ignoresSafeArea()
+                
+                ScrollView(showsIndicators: false) {
+                    VStack {
+                        HStack {
+                            Text("Recents")
+                                .font(.title.bold())
+                                .foregroundColor(.white.opacity(0.8))
+                            Spacer()
+                            Text("3 articles")
+                                .font(.subheadline)
+                                .foregroundColor(.gray)
+                                .bold()
+                        }
+                        .padding()
+                        
+                        ScrollView(.horizontal, showsIndicators: false) {
+                            HStack(spacing: 20) {
+                                Spacer()
+                                
+                                Card(title: "Test", description: "Test", category: .music, backgroundColor: Color.cyan.opacity(0.7))
+                                
+                                
+                                
+                                
+                                Card(title: "Test", description: "Test", category: .sports, backgroundColor: Color.purple.opacity(0.7))
+                                
+                                
+                                
+                                Card(title: "Test", description: "Test", category: .politics,backgroundColor: Color.green.opacity(0.7))
+                                
+                                
                                 Spacer()
                             }
-                            .padding()
-                            
-                            ScrollView(.horizontal, showsIndicators: false) {
-                                HStack(spacing: 32) {
-                                    Spacer()
-                                    Button {
-                                        print("Recents pressd")
-                                    } label: {
-                                        Card(title: "Test", description: "Test", imageName: "person")
-                                    }
-
-                                    
-                                    Button {
-                                        print("Recents pressed")
-                                    } label: {
-                                        Card(title: "Test", description: "Test", imageName: "person")
-                                    }
-                                    Button {
-                                        print("Recents pressed")
-                                    } label: {
-                                        Card(title: "Test", description: "Test", imageName: "person")
-                                    }
-
-                                    Spacer()
-                                }
-                                .padding(.vertical)
-                            }
-                            
-                            // Categories
-                            
-                            
-                            VStack(alignment: .leading, spacing: 40) {
-                                Text("Categories")
-                                    .font(.largeTitle.bold())
-                                    .foregroundColor(.black)
-                                
-                                HStack(alignment: .center) {
-                                    Spacer()
-                                    ForEach(categories1, id: \.imageName) { category in
-                                        Spacer()
-                                        NavigationLink() {
-                                            CategoryListView(categoryName: category.imageName)
-                                        } label: {
-                                            category
-                                        }
-                                        Spacer()
-                                    }
-
-                                    Spacer()
-                                    
-                                }
-                                HStack(alignment: .center) {
-                                    Spacer()
-                                    ForEach(categories2, id: \.imageName) { category in
-                                        Spacer()
-                                        NavigationLink() {
-                                            CategoryListView(categoryName: category.imageName)
-                                        } label: {
-                                            category
-                                        }
-                                        Spacer()
-                                    }
-                                    Spacer()
-                                    
-                                    
-                                }
-                            }
-                            .padding()
-                            
-                            
+                            .padding(.vertical)
                         }
+                        
+                        
+                       
+//                        VStack {
+//                            HStack {
+//                                Text("Our Team Members!")
+//                                    .font(.title3.bold())
+//                                    .foregroundColor(.white.opacity(0.8))
+//                                Spacer()
+//                            }
+//                            .padding()
+//
+//                            ScrollView(.horizontal, showsIndicators: false) {
+//                                HStack {
+//                                    Text("Sheen Gupta")
+//                                        .frame(width: 120, height: 30)
+//                                        .background(Color("Primary"))
+//                                        .cornerRadius(20)
+//                                    Text("Sheen Gupta")
+//                                        .frame(width: 120, height: 30)
+//                                        .background(Color("Primary"))
+//                                        .cornerRadius(20)
+//                                    Text("Sheen Gupta")
+//                                        .frame(width: 120, height: 30)
+//                                        .background(Color("Primary"))
+//                                        .cornerRadius(20)
+//                                    Text("Sheen Gupta")
+//                                        .frame(width: 120, height: 30)
+//                                        .background(Color("Primary"))
+//                                        .cornerRadius(20)
+//                                    Text("Sheen Gupta")
+//                                        .frame(width: 120, height: 30)
+//                                        .background(Color("Primary"))
+//                                        .cornerRadius(20)
+//                                }
+//                                .padding(.horizontal)
+//                            }
+//                        }
+                        
+                        
+                        // Category grid view
+                        VStack(alignment: .leading, spacing: 40) {
+                            Text("Categories")
+                                .font(.title.bold())
+                                .foregroundColor(.white.opacity(0.8))
+                            
+                            
+                            HStack(alignment: .center) {
+                                Spacer()
+                                ForEach(categories1, id: \.imageName) { category in
+                                    Spacer()
+                                    NavigationLink() {
+                                        CategoryListView(categoryName: category.imageName)
+                                    } label: {
+                                        category
+                                    }
+                                    Spacer()
+                                }
+                                
+                                Spacer()
+                                
+                            }
+                            
+                            HStack(alignment: .center) {
+                                Spacer()
+                                ForEach(categories2, id: \.imageName) { category in
+                                    Spacer()
+                                    NavigationLink() {
+                                        CategoryListView(categoryName: category.imageName)
+                                    } label: {
+                                        category
+                                    }
+                                    Spacer()
+                                }
+                                Spacer()
+                                
+                                
+                            }
+                        }
+                        .padding()
+                        
+                        
+                        
+//
+                        
+                        
                     }
-                    
                 }
-                .navigationBarHidden(true)
-                .navigationBarBackButtonHidden(true)
+                
+            }
+            .navigationBarHidden(true)
+            .navigationBarBackButtonHidden(true)
             .navigationBarTitleDisplayMode(.inline)
         }
     }
