@@ -9,9 +9,8 @@ import SwiftUI
 
 struct Card: View {
     
-    var title: String
-    var description: String
-    var category: ArticleCategory
+    var article: Article
+    
     var backgroundColor: Color
     
     var body: some View {
@@ -20,7 +19,7 @@ struct Card: View {
             
             
             
-            backgroundColor
+            LinearGradient(colors: [backgroundColor, backgroundColor.opacity(0.6)], startPoint: .topLeading, endPoint: .bottomTrailing)
                 
                 
             
@@ -29,20 +28,20 @@ struct Card: View {
             
             VStack {
                 HStack {
-                    Image(category.rawValue)
+                    Image(article.category.rawValue)
                         .resizable()
                         .scaledToFit()
                         .frame(width: 30, height: 30)
                         
                     Spacer()
                 }
-                    Text(title)
+                Text(article.title)
                     .font(.headline)
                         .foregroundColor(Color("Background"))
                  
                 Spacer()
                 NavigationLink() {
-                    CategoryListView(categoryName: category.rawValue)
+                    ArticleDetailView(article: article)
                 } label: {
                     Text("Read More")
                         .frame(width: 100, height: 30)
@@ -65,6 +64,6 @@ struct Card: View {
 
 struct Card_Previews: PreviewProvider {
     static var previews: some View {
-        Card(title: "Zyzz Legacy", description: "This is the legacy of zyzz", category: .music, backgroundColor: Color.cyan.opacity(0.7))
+        Card(article: Article(title: "Zyzz Legacy", description: "Zyzz amazing", body: "Zyzz body", authorName: "Aakash Kothari", category: .music), backgroundColor: .cyan.opacity(0.8))
     }
 }

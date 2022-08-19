@@ -14,6 +14,11 @@ struct NavigationBarView: View {
                 .tabItem {
                     Label("Home", systemImage: "house.fill")
                 }
+            
+            About()
+                .tabItem {
+                    Label("About", systemImage: "person.3")
+                }
         }
         
         

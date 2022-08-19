@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E14B80228ADF5550036C497 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14B80128ADF5550036C497 /* About.swift */; };
 		0E17DCBD28A175E500902629 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E17DCBC28A175E500902629 /* EmailTextField.swift */; };
+		0E40733728AE33D800A4E5BD /* AboutSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40733628AE33D800A4E5BD /* AboutSelectButton.swift */; };
+		0E40733928AE382700A4E5BD /* TeamMemberCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40733828AE382700A4E5BD /* TeamMemberCard.swift */; };
 		0E7423EB28A17D04005A8CB3 /* SecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7423EA28A17D04005A8CB3 /* SecureTextField.swift */; };
 		0E83FC7628A38EB50072B998 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83FC7528A38EB50072B998 /* NavigationBarView.swift */; };
 		0E99B7CC28A3A43F00F08E55 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E99B7CB28A3A43F00F08E55 /* CategoryListView.swift */; };
 		0E99B7CE28A3A6B300F08E55 /* ArticleListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E99B7CD28A3A6B300F08E55 /* ArticleListItem.swift */; };
+		0EB11CD028ACA8A100AF1982 /* ArticleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB11CCF28ACA8A100AF1982 /* ArticleDetailView.swift */; };
+		0EB11CD228ACAAD200AF1982 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB11CD128ACAAD200AF1982 /* Article.swift */; };
 		0EB1215B28A2A919002A9E3A /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB1215A28A2A919002A9E3A /* Home.swift */; };
 		0EB21DED28AB58AA003F0A23 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 0EB21DEC28AB58AA003F0A23 /* FirebaseAnalytics */; };
 		0EB21DEF28AB58AA003F0A23 /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 0EB21DEE28AB58AA003F0A23 /* FirebaseAnalyticsSwift */; };
@@ -35,11 +40,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E14B80128ADF5550036C497 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
 		0E17DCBC28A175E500902629 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		0E40733628AE33D800A4E5BD /* AboutSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSelectButton.swift; sourceTree = "<group>"; };
+		0E40733828AE382700A4E5BD /* TeamMemberCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberCard.swift; sourceTree = "<group>"; };
 		0E7423EA28A17D04005A8CB3 /* SecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextField.swift; sourceTree = "<group>"; };
 		0E83FC7528A38EB50072B998 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		0E99B7CB28A3A43F00F08E55 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
 		0E99B7CD28A3A6B300F08E55 /* ArticleListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListItem.swift; sourceTree = "<group>"; };
+		0EB11CCF28ACA8A100AF1982 /* ArticleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleDetailView.swift; sourceTree = "<group>"; };
+		0EB11CD128ACAAD200AF1982 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
 		0EB1215A28A2A919002A9E3A /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		0EB42CDA28A1700C00D192C2 /* Eagles Bulletin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Eagles Bulletin.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EB42CDD28A1700C00D192C2 /* Eagles_BulletinApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Eagles_BulletinApp.swift; sourceTree = "<group>"; };
@@ -120,6 +130,8 @@
 				0EB1215A28A2A919002A9E3A /* Home.swift */,
 				0E83FC7528A38EB50072B998 /* NavigationBarView.swift */,
 				0E99B7CB28A3A43F00F08E55 /* CategoryListView.swift */,
+				0EB11CCF28ACA8A100AF1982 /* ArticleDetailView.swift */,
+				0E14B80128ADF5550036C497 /* About.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -127,6 +139,7 @@
 		0EB42CEC28A1702000D192C2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0EB11CD128ACAAD200AF1982 /* Article.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,6 +160,8 @@
 				0EB7FC1628A2D27600BA62E0 /* Category.swift */,
 				0E99B7CD28A3A6B300F08E55 /* ArticleListItem.swift */,
 				0EDE346E28ABA45600543A82 /* Enums.swift */,
+				0E40733628AE33D800A4E5BD /* AboutSelectButton.swift */,
+				0E40733828AE382700A4E5BD /* TeamMemberCard.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -264,17 +279,22 @@
 				0EFE894928A2236C00B20138 /* SignupView.swift in Sources */,
 				0EB7FC1728A2D27600BA62E0 /* Category.swift in Sources */,
 				0E83FC7628A38EB50072B998 /* NavigationBarView.swift in Sources */,
+				0EB11CD028ACA8A100AF1982 /* ArticleDetailView.swift in Sources */,
 				0E99B7CE28A3A6B300F08E55 /* ArticleListItem.swift in Sources */,
 				0EDE346F28ABA45600543A82 /* Enums.swift in Sources */,
 				0EF2B7E228A2CC3700ED3C3B /* Card.swift in Sources */,
+				0E40733728AE33D800A4E5BD /* AboutSelectButton.swift in Sources */,
 				0E7423EB28A17D04005A8CB3 /* SecureTextField.swift in Sources */,
 				0EB42CF228A170D100D192C2 /* LoginView.swift in Sources */,
 				0E99B7CC28A3A43F00F08E55 /* CategoryListView.swift in Sources */,
 				0E17DCBD28A175E500902629 /* EmailTextField.swift in Sources */,
 				0EB42CF528A1723100D192C2 /* AuthButton.swift in Sources */,
+				0EB11CD228ACAAD200AF1982 /* Article.swift in Sources */,
 				0EB42CE028A1700C00D192C2 /* ContentView.swift in Sources */,
 				0EB1215B28A2A919002A9E3A /* Home.swift in Sources */,
+				0E14B80228ADF5550036C497 /* About.swift in Sources */,
 				0EB42CDE28A1700C00D192C2 /* Eagles_BulletinApp.swift in Sources */,
+				0E40733928AE382700A4E5BD /* TeamMemberCard.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

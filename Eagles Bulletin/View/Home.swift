@@ -8,7 +8,13 @@
 import SwiftUI
 
 struct Home: View {
+    var dummyDescription: String = """
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac odio ac turpis fermentum tempus a ut est. Nunc eget laoreet libero, ut cursus dui. Mauris ut lacus mauris. In sodales lacus vehicula arcu condimentum, gravida consectetur nisi efficitur.
+    """
     
+    var dummyBody: String = """
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ac odio ac turpis fermentum tempus a ut est. Nunc eget laoreet libero, ut cursus dui. Mauris ut lacus mauris. In sodales lacus vehicula arcu condimentum, gravida consectetur nisi efficitur.
+    """
     var categories1: [Category] = [ Category(imageName: "Politics"), Category(imageName: "Sports"), Category(imageName: "Music")]
     var categories2 : [Category] = [Category(imageName: "Food"), Category(imageName: "Art"),Category(imageName: "Health")]
     
@@ -18,15 +24,46 @@ struct Home: View {
             ZStack {
                 Color("Background")
                     .ignoresSafeArea()
+                    
                 
                 ScrollView(showsIndicators: false) {
                     VStack {
+                        
+                        
+                        // Title with subtitle
+                        
+                        VStack(spacing: 10) {
+                            HStack {
+                                Text("Welcome to Eagle's Bulletin!")
+                                    .bold()
+                                    .font(.largeTitle)
+                                    .foregroundColor(.white.opacity(0.8))
+                                Spacer()
+                                
+                                Image("Logo")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 50, height: 50)
+                            }
+                            
+                            HStack {
+                                Text("Articles and more!")
+                                    .bold()
+                                    .font(.title3)
+                                    .foregroundColor(Color.gray.opacity(0.5))
+                                
+                                Spacer()
+                            }
+                        }
+                        .padding()
+                        
                         HStack {
                             Text("Recents")
                                 .font(.title.bold())
-                                .foregroundColor(.white.opacity(0.8))
+                                .foregroundColor(.white.opacity(0.5))
+                            
                             Spacer()
-                            Text("3 articles")
+                            Text("4 articles")
                                 .font(.subheadline)
                                 .foregroundColor(.gray)
                                 .bold()
@@ -37,17 +74,18 @@ struct Home: View {
                             HStack(spacing: 20) {
                                 Spacer()
                                 
-                                Card(title: "Test", description: "Test", category: .music, backgroundColor: Color.cyan.opacity(0.7))
+                                Card(article: Article(title: "Test article", description: dummyDescription, body:dummyBody, authorName: "Aakash Kothari", category: .music), backgroundColor: Color.cyan.opacity(0.7))
+                                
+                                Card(article: Article(title: "Test article", description: dummyDescription, body: dummyBody, authorName: "Aakash Kothari", category: .music), backgroundColor: Color.purple.opacity(0.7))
+                                
+                                Card(article: Article(title: "Test article", description: dummyDescription, body: dummyBody, authorName: "Aakash Kothari", category: .music), backgroundColor: Color.orange.opacity(0.7))
+                                
+                                Card(article: Article(title: "Test article", description: dummyDescription, body: dummyBody, authorName: "Aakash Kothari", category: .music), backgroundColor: Color.green.opacity(0.7))
                                 
                                 
                                 
-                                
-                                Card(title: "Test", description: "Test", category: .sports, backgroundColor: Color.purple.opacity(0.7))
-                                
-                                
-                                
-                                Card(title: "Test", description: "Test", category: .politics,backgroundColor: Color.green.opacity(0.7))
-                                
+//                                Card(title: "Test", description: "Test", category: .politics,backgroundColor: Color.green.opacity(0.7))
+                              
                                 
                                 Spacer()
                             }
@@ -97,7 +135,7 @@ struct Home: View {
                         VStack(alignment: .leading, spacing: 40) {
                             Text("Categories")
                                 .font(.title.bold())
-                                .foregroundColor(.white.opacity(0.8))
+                                .foregroundColor(.white.opacity(0.5))
                             
                             
                             HStack(alignment: .center) {

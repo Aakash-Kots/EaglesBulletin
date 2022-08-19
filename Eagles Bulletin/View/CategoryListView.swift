@@ -28,7 +28,7 @@ struct CategoryListView: View {
                         Text(categoryName)
                             .font(.largeTitle)
                             .bold()
-                            .foregroundColor(.black)
+                            .foregroundColor(.white.opacity(0.8))
                         Image(categoryName)
                             .resizable()
                             .scaledToFit()
