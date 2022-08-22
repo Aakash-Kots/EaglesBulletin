@@ -11,7 +11,7 @@ struct AuthButton: View {
     var text: String
     var body: some View {
         Text(text)
-            .foregroundColor(.black)
+            .foregroundColor(.white.opacity(0.8))
             .bold()
             .frame(width: 306, height: 50)
             .background(Color("Primary"))

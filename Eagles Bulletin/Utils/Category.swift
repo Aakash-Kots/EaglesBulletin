@@ -10,6 +10,9 @@ import SwiftUI
 struct Category: View {
     
     var imageName: String
+    
+    @EnvironmentObject var authViewModel: AuthViewModel
+   
     var body: some View {
         ZStack {
             Color("Primary")

@@ -11,6 +11,7 @@ struct LoginView: View {
     @State var password: String = ""
     @State var email: String = ""
     @State var signUp: Bool = false
+    @EnvironmentObject var authViewModel: AuthViewModel
     var body: some View {
         NavigationView {
             ZStack {
@@ -21,7 +22,7 @@ struct LoginView: View {
                         HStack {
                             Text("The Eagle's Bulletin")
                                 .font(.system(size: 34)).bold()
-                                .foregroundColor(Color(hex: "093d17"))
+                                .foregroundColor(Color.cyan.opacity(0.8))
                             Spacer()
                             Image("Logo")
                                 .resizable()
@@ -34,7 +35,7 @@ struct LoginView: View {
                         HStack {
                             Text("Welcome Back!")
                                 .font(.system(size: 25).bold())
-                            .foregroundColor(.black)
+                                .foregroundColor(.gray.opacity(0.7))
                             Spacer()
                         }
                             
@@ -46,11 +47,12 @@ struct LoginView: View {
                             
                             
                             SecureTextField(placeholder: "Password", text: $password, imageName: "lock")
-                            NavigationLink() {
-                                // Login the user. This should automatically take the user to the home page. Firebase functionality needed
+                            Button {
+                                authViewModel.login(withEmail: email, password: password)
                             } label: {
                                 AuthButton(text: "Login")
                             }
+
 
                         }
                         

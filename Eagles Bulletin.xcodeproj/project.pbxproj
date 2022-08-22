@@ -7,11 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0E14B80228ADF5550036C497 /* About.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14B80128ADF5550036C497 /* About.swift */; };
+		0E14B80228ADF5550036C497 /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E14B80128ADF5550036C497 /* Team.swift */; };
 		0E17DCBD28A175E500902629 /* EmailTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E17DCBC28A175E500902629 /* EmailTextField.swift */; };
+		0E34F76628AFDDAD00F3B216 /* AddArticleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E34F76528AFDDAD00F3B216 /* AddArticleView.swift */; };
 		0E40733728AE33D800A4E5BD /* AboutSelectButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40733628AE33D800A4E5BD /* AboutSelectButton.swift */; };
 		0E40733928AE382700A4E5BD /* TeamMemberCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E40733828AE382700A4E5BD /* TeamMemberCard.swift */; };
 		0E7423EB28A17D04005A8CB3 /* SecureTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7423EA28A17D04005A8CB3 /* SecureTextField.swift */; };
+		0E7E779F28B206E200A57C83 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E779E28B206E200A57C83 /* AuthViewModel.swift */; };
+		0E7E77A128B2084300A57C83 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E7E77A028B2084300A57C83 /* GoogleService-Info.plist */; };
+		0E7E77A328B20CB000A57C83 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E77A228B20CB000A57C83 /* Constants.swift */; };
+		0E7E77A528B20E6400A57C83 /* AppUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7E77A428B20E6400A57C83 /* AppUser.swift */; };
 		0E83FC7628A38EB50072B998 /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E83FC7528A38EB50072B998 /* NavigationBarView.swift */; };
 		0E99B7CC28A3A43F00F08E55 /* CategoryListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E99B7CB28A3A43F00F08E55 /* CategoryListView.swift */; };
 		0E99B7CE28A3A6B300F08E55 /* ArticleListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E99B7CD28A3A6B300F08E55 /* ArticleListItem.swift */; };
@@ -40,11 +45,16 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0E14B80128ADF5550036C497 /* About.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = About.swift; sourceTree = "<group>"; };
+		0E14B80128ADF5550036C497 /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		0E17DCBC28A175E500902629 /* EmailTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailTextField.swift; sourceTree = "<group>"; };
+		0E34F76528AFDDAD00F3B216 /* AddArticleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddArticleView.swift; sourceTree = "<group>"; };
 		0E40733628AE33D800A4E5BD /* AboutSelectButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutSelectButton.swift; sourceTree = "<group>"; };
 		0E40733828AE382700A4E5BD /* TeamMemberCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TeamMemberCard.swift; sourceTree = "<group>"; };
 		0E7423EA28A17D04005A8CB3 /* SecureTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureTextField.swift; sourceTree = "<group>"; };
+		0E7E779E28B206E200A57C83 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		0E7E77A028B2084300A57C83 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0E7E77A228B20CB000A57C83 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		0E7E77A428B20E6400A57C83 /* AppUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppUser.swift; sourceTree = "<group>"; };
 		0E83FC7528A38EB50072B998 /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		0E99B7CB28A3A43F00F08E55 /* CategoryListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListView.swift; sourceTree = "<group>"; };
 		0E99B7CD28A3A6B300F08E55 /* ArticleListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleListItem.swift; sourceTree = "<group>"; };
@@ -87,6 +97,7 @@
 		0EB42CD128A1700B00D192C2 = {
 			isa = PBXGroup;
 			children = (
+				0E7E77A028B2084300A57C83 /* GoogleService-Info.plist */,
 				0EB42CDC28A1700C00D192C2 /* Eagles Bulletin */,
 				0EB42CDB28A1700C00D192C2 /* Products */,
 			);
@@ -131,7 +142,8 @@
 				0E83FC7528A38EB50072B998 /* NavigationBarView.swift */,
 				0E99B7CB28A3A43F00F08E55 /* CategoryListView.swift */,
 				0EB11CCF28ACA8A100AF1982 /* ArticleDetailView.swift */,
-				0E14B80128ADF5550036C497 /* About.swift */,
+				0E14B80128ADF5550036C497 /* Team.swift */,
+				0E34F76528AFDDAD00F3B216 /* AddArticleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -140,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				0EB11CD128ACAAD200AF1982 /* Article.swift */,
+				0E7E77A428B20E6400A57C83 /* AppUser.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -147,6 +160,7 @@
 		0EB42CED28A1702500D192C2 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				0E7E779E28B206E200A57C83 /* AuthViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -162,6 +176,7 @@
 				0EDE346E28ABA45600543A82 /* Enums.swift */,
 				0E40733628AE33D800A4E5BD /* AboutSelectButton.swift */,
 				0E40733828AE382700A4E5BD /* TeamMemberCard.swift */,
+				0E7E77A228B20CB000A57C83 /* Constants.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -265,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EB42CE528A1700C00D192C2 /* Preview Assets.xcassets in Resources */,
+				0E7E77A128B2084300A57C83 /* GoogleService-Info.plist in Resources */,
 				0EB42CE228A1700C00D192C2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,12 +293,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EFE894928A2236C00B20138 /* SignupView.swift in Sources */,
+				0E7E77A328B20CB000A57C83 /* Constants.swift in Sources */,
 				0EB7FC1728A2D27600BA62E0 /* Category.swift in Sources */,
 				0E83FC7628A38EB50072B998 /* NavigationBarView.swift in Sources */,
 				0EB11CD028ACA8A100AF1982 /* ArticleDetailView.swift in Sources */,
 				0E99B7CE28A3A6B300F08E55 /* ArticleListItem.swift in Sources */,
+				0E7E77A528B20E6400A57C83 /* AppUser.swift in Sources */,
 				0EDE346F28ABA45600543A82 /* Enums.swift in Sources */,
 				0EF2B7E228A2CC3700ED3C3B /* Card.swift in Sources */,
+				0E34F76628AFDDAD00F3B216 /* AddArticleView.swift in Sources */,
 				0E40733728AE33D800A4E5BD /* AboutSelectButton.swift in Sources */,
 				0E7423EB28A17D04005A8CB3 /* SecureTextField.swift in Sources */,
 				0EB42CF228A170D100D192C2 /* LoginView.swift in Sources */,
@@ -292,7 +311,8 @@
 				0EB11CD228ACAAD200AF1982 /* Article.swift in Sources */,
 				0EB42CE028A1700C00D192C2 /* ContentView.swift in Sources */,
 				0EB1215B28A2A919002A9E3A /* Home.swift in Sources */,
-				0E14B80228ADF5550036C497 /* About.swift in Sources */,
+				0E7E779F28B206E200A57C83 /* AuthViewModel.swift in Sources */,
+				0E14B80228ADF5550036C497 /* Team.swift in Sources */,
 				0EB42CDE28A1700C00D192C2 /* Eagles_BulletinApp.swift in Sources */,
 				0E40733928AE382700A4E5BD /* TeamMemberCard.swift in Sources */,
 			);

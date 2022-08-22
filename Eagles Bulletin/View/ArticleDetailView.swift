@@ -17,7 +17,7 @@ struct ArticleDetailView: View {
                 .ignoresSafeArea()
             
             ScrollView(showsIndicators: false) {
-                VStack(spacing: 40){
+                VStack(spacing: 20){
                     
                     VStack(spacing: 5) {
                         HStack(spacing: 20) {
@@ -47,7 +47,7 @@ struct ArticleDetailView: View {
                     
                     // Main Part of article
                     
-                    VStack(alignment: .leading, spacing: 10) {
+                    VStack(alignment: .leading, spacing: 20) {
                        
                         
                         Text(article.description)

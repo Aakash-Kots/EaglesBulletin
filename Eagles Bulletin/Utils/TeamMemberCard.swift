@@ -51,7 +51,7 @@ struct TeamMemberCard: View {
                 Spacer()
             }
         }
-        .frame(width: .infinity)
+//        .frame(width: .infinity)
         .cornerRadius(20)
 //        .shadow(color: .black.opacity(0.10), radius: 20)
         

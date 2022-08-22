@@ -17,6 +17,7 @@ struct Home: View {
     """
     var categories1: [Category] = [ Category(imageName: "Politics"), Category(imageName: "Sports"), Category(imageName: "Music")]
     var categories2 : [Category] = [Category(imageName: "Food"), Category(imageName: "Art"),Category(imageName: "Health")]
+    @EnvironmentObject var authViewModel: AuthViewModel
     
     var body: some View {
         
@@ -40,10 +41,18 @@ struct Home: View {
                                     .foregroundColor(.white.opacity(0.8))
                                 Spacer()
                                 
-                                Image("Logo")
-                                    .resizable()
-                                    .scaledToFit()
+                                VStack {
+                                    Button {
+                                        authViewModel.signOut()
+                                    } label: {
+                                        Image(systemName: "rectangle.portrait.and.arrow.right")
+                                    }
+                                    Spacer() 
+                                    Image("Logo")
+                                        .resizable()
+                                        .scaledToFit()
                                     .frame(width: 50, height: 50)
+                                }
                             }
                             
                             HStack {
@@ -163,10 +172,12 @@ struct Home: View {
                                     } label: {
                                         category
                                     }
+                                    
+                                   
                                     Spacer()
                                 }
-                                Spacer()
                                 
+                                Spacer()
                                 
                             }
                         }

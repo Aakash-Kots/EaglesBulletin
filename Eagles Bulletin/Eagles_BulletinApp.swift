@@ -6,12 +6,19 @@
 //
 
 import SwiftUI
-
+import Firebase
 @main
 struct Eagles_BulletinApp: App {
+    
+    init() {
+        FirebaseApp.configure()
+    }
+    
     var body: some Scene {
         WindowGroup {
-            NavigationBarView()
+            ContentView()
+                .environmentObject(AuthViewModel.shared)
         }
     }
+    
 }

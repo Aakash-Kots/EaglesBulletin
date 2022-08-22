@@ -46,7 +46,7 @@ struct Card: View {
                     Text("Read More")
                         .frame(width: 100, height: 30)
                         .foregroundColor(.white)
-                        .background(Color("Background"))
+                        .background(Color("Primary"))
                         .cornerRadius(5)
                 }
                 

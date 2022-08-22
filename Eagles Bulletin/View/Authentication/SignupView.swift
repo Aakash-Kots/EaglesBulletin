@@ -11,6 +11,7 @@ struct SignupView: View {
     @State var email: String = ""
     @State var password: String = ""
     @Environment(\.presentationMode) var mode
+    @EnvironmentObject var authViewModel: AuthViewModel
     var body: some View {
         
         ZStack {
@@ -23,7 +24,7 @@ struct SignupView: View {
                     HStack {
                         Text("The Eagle's Bulletin")
                             .font(.system(size: 34)).bold()
-                            .foregroundColor(Color(hex: "093d17"))
+                            .foregroundColor(Color.cyan.opacity(0.8))
                         Spacer()
                         Image("Logo")
                             .resizable()
@@ -35,7 +36,7 @@ struct SignupView: View {
                     HStack {
                         Text("Welcome!")
                             .font(.system(size: 25).bold())
-                            .foregroundColor(.black)
+                            .foregroundColor(.gray.opacity(0.7))
                         Spacer()
                     }
                     
@@ -48,7 +49,7 @@ struct SignupView: View {
                         
                         SecureTextField(placeholder: "Password", text: $password, imageName: "lock")
                         Button {
-                            print("Login")
+                            authViewModel.signUp(withEmail: email, password: password)
                         } label: {
                             AuthButton(text: "Sign Up")
                         }

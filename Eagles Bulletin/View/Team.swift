@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct About: View {
+struct Team: View {
     var positions: [String] = ["Founder", "Editor", "Designer", "Writer"]
     @State private var selected: Int = 0
     var body: some View {
@@ -84,10 +84,10 @@ struct About: View {
     }
 }
 
-struct About_Previews: PreviewProvider {
+struct Team_Previews: PreviewProvider {
     static var previews: some View {
         Group {
-            About()
+            Team()
             
         }
     }
